@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Duty Leave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Validate Duty Leave Applications</h1>
+
+    <!-- Flash messages section -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('validate_duty_leave') }}" method="POST" enctype="multipart/form-data">
+        <label for="date">Select Date for Validation:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="file">Upload Excel File:</label>
+        <input type="file" id="file" name="file" required accept=".xls,.xlsx">
+        
+        <button type="submit" class="button">Validate Leave Applications</button>
+    </form>
+
+    <a href="{{ url_for('coordinator_dashboard') }}" class="back-button">Back to Dashboard</a>
+</div>
+</body>
+</html>

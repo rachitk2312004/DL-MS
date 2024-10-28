@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Duty Leave Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Duty Leave Management System</h1>
+
+        <div class="dashboard-content">
+            <h2>Choose an Option</h2>
+
+            <div>
+                <a href="{{ url_for('login_student') }}">
+                    <button type="button">Login as Student</button>
+                </a>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('register_student') }}">
+                    <button type="button">Register as Student</button>
+                </a>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="{{ url_for('login_coordinator') }}">
+                    <button type="button" class="coordinator-button">Login as Coordinator</button>
+                </a>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="{{ url_for('register_coordinator') }}">
+                    <button type="button" class="coordinator-button">Register as Coordinator</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
