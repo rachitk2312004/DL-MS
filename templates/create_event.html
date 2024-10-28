@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Event</h1>
+        
+        <form action="/create_event" method="POST" class="form-section">
+            <!-- Event Name -->
+            <div class="form-group">
+                <label for="event_name">Event Name:</label>
+                <input type="text" id="event_name" name="event_name" required placeholder="Enter event name">
+            </div>
+
+            <!-- Event Type -->
+            <div class="form-group">
+                <label for="event_type">Event Type:</label>
+                <select id="event_type" name="event_type" required>
+                    <option value="" disabled selected>Select event type</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Ideation">Ideation</option>
+                </select>
+            </div>
+
+            <!-- Venue -->
+            <div class="form-group">
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" required placeholder="Enter venue">
+            </div>
+
+            <!-- Timings -->
+            <div class="form-group">
+                <label for="timings">Timings:</label>
+                <input type="text" id="timings" name="timings" required placeholder="E.g., 10:00 AM - 4:00 PM">
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <!-- Max Students -->
+            <div class="form-group">
+                <label for="max_students">Max Students:</label>
+                <input type="number" id="max_students" name="max_students" required placeholder="Enter max number of students" min="1">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="button">Create Event</button>
+            </div>
+        </form>
+
+    <a href="{{ url_for('coordinator_dashboard') }}" class="back-button">Back to Dashboard</a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinator Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Coordinator Registration</h1>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="unique_id">Unique Coordinator ID:</label>
+            <input type="text" id="unique_id" name="unique_id" required>
+
+            <button type="submit">Register as Coordinator</button>
+        </form>
+
+        <a href="{{ url_for('login_coordinator') }}">Already registered? Login here</a>
+    </div>
+</body>
+</html> 

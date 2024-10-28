@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registrations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Event Registrations</h1>
+    <div class="registration-list">
+        {% if registrations %}
+            <ul>
+                {% for registration in registrations %}
+                    <li>{{ registration.name }} ({{ registration.uid }})</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No registrations for this event.</p>
+        {% endif %}
+    </div>
+
+    <!-- Button to download registrations as Excel -->
+    <div class="button-container">
+        <a href="{{ url_for('download_registrations', event_id=event_id) }}" class="button">Download Registrations as Excel</a>
+        <br>
+        <a href="/coordinator_dashboard" class="button back-button">Back to Dashboard</a>
+    </div>
+</div>
+</body>
+</html>
