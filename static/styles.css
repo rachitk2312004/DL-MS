@@ -1,4 +1,4 @@
-/* General Styling */
+/* main */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ body {
     text-align: center;
 }
 
-/* Heading Styles */
+/* Heading */
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -37,7 +37,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Form Styling */
+/* Form */
 form {
     display: flex;
     flex-direction: column;
@@ -106,8 +106,8 @@ a:hover {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    width: 150px; /* Set your desired width */
-    text-align: center; /* Center text within the button */
+    width: 150px; 
+    text-align: center; 
 }
 
 
@@ -115,7 +115,7 @@ a:hover {
     background-color: #c9302c;
 }
 
-/* Dashboard Section Styling */
+/* Dashboard Section */
 .dashboard-content {
     margin-top: 20px;
     text-align: left;
@@ -132,7 +132,7 @@ a:hover {
     font-size: 18px;
 }
 
-/* Symmetrical Alignment */
+/* Symmetric */
 form,
 .dashboard-content {
     display: flex;
@@ -153,7 +153,7 @@ a {
     flex-direction: column;
     align-items: center;
 }
-
+/* small screen*/
 @media (min-width: 768px) {
     .container {
         max-width: 600px;
@@ -169,7 +169,7 @@ a {
     }
 }
 
-/* Flash Messages */
+/* alertss */
 .flash-messages {
     margin: 20px 0;
 }
@@ -198,7 +198,7 @@ a {
     border: 1px solid #ffeeba;
 }
 
-/* Applied Leave Section Styling */
+/* Applied Leave */
 .applied-leave-section {
     margin-top: 20px;
     padding: 15px;
@@ -247,7 +247,7 @@ a {
     text-align: center;
 }
 
-/* Event Sections Styling */
+/* Event Sections */
 .event-section {
     margin-top: 20px;
     padding: 15px;
@@ -305,7 +305,7 @@ a {
     transition: background-color 0.3s;
 }
 
-/* Back to Dashboard Button Styling */
+/* Back to Dashboard Button  */
 .back-button {
     display: inline-block;
     padding: 10px 20px;
@@ -316,8 +316,8 @@ a {
     text-align: center;
     margin-top: 15px;
     transition: background-color 0.3s;
-    width: 180px; /* Set your desired width */
-    text-align: center; /* Center text within the button */
+    width: 180px; 
+    text-align: center; 
 }
 
 .back-button:hover {
